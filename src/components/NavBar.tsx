@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 
 // Define navigation items
@@ -12,7 +11,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "/" },
+  { label: "Dashbo", href: "/" },
   { label: "Map", href: "/map" },
   { label: "About", href: "/about" },
 ];

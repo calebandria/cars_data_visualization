@@ -1,16 +1,33 @@
-import Navbar from "./components/NavBar"
+import Sidebar from "./components/SideBar"
+import { Routes, Route} from "react-router-dom";
+import DashBoard from "./pages/Dashboard";
+import Cars from "./pages/Cars";
 
+// Placeholder components
+const MapPage: React.FC = () => (
+  <div className="p-8">
+    <h1 className="text-3xl font-bold text-primary">Map</h1>
+    <p className="mt-4 text-gray-600">This is the Map page.</p>
+  </div>
+);
+
+const DataPage: React.FC = () => (
+  <div className="p-8">
+    <h1 className="text-3xl font-bold text-primary">Data</h1>
+    <p className="mt-4 text-gray-600">This is the Data page.</p>
+  </div>
+);
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Navbar />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl font-bold text-primary">
-          Welcome to MapApp
-        </h1>
-        <p className="mt-4 text-gray-600">
-          This is a sample app with a shadcn/ui Navbar and Framer Motion animations.
-        </p>
+    <div className="min-h-screen bg-gray-100 flex">
+      <Sidebar />
+      <main className="flex-1 p-8 ml-16 sm:ml-64">
+        <Routes>
+          <Route path="/" element={<DashBoard />} />
+          <Route path="/map" element={<MapPage />} />
+          <Route path="/data" element={<DataPage />} />
+          <Route path="/cars" element={<Cars />} />
+        </Routes>
       </main>
     </div>
   );
