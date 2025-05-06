@@ -1,5 +1,5 @@
 import BarPlotCar from "../components/BarPlotCar";
-
+import OwnershipTypeChart from "@/components/OwnerShipTypeDonutChart";
 const Cars: React.FC = () => {
 
     return (
@@ -8,7 +8,10 @@ const Cars: React.FC = () => {
                 <h1 className="text-3xl font-bold text-primary">Cars</h1>
                 <p className="mt-4 text-gray-600">Welcome to the Cars page.</p>
             </div>
-            <BarPlotCar/>
+            <div className="flex">
+                <BarPlotCar />
+                <OwnershipTypeChart />
+            </div>
         </>
     )
 }

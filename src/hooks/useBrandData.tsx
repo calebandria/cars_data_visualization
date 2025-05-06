@@ -34,11 +34,13 @@ export const useBrandData = (apiUrl: string = "http://localhost:8080/api/brands"
         const rawData: BrandData[] = await response.json();
 
         // Map to chart data (top 8 brands + Others)
-        const topBrands = rawData.slice(0, 8);
+        const topBrands = rawData.slice(0, 16);
         const othersCount = rawData
-          .slice(8)
+          .slice(16)
           .reduce((sum, item) => sum + item.count, 0);
+        const others = { brand: "others", count: othersCount }
 
+        topBrands.push(others)
         const chartData: ChartData[] = [
           ...rawData.map((item, index) => ({
             brand: item.brand,

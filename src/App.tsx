@@ -2,14 +2,7 @@ import Sidebar from "./components/SideBar"
 import { Routes, Route} from "react-router-dom";
 import DashBoard from "./pages/Dashboard";
 import Cars from "./pages/Cars";
-
-// Placeholder components
-const MapPage: React.FC = () => (
-  <div className="p-8">
-    <h1 className="text-3xl font-bold text-primary">Map</h1>
-    <p className="mt-4 text-gray-600">This is the Map page.</p>
-  </div>
-);
+import MapPage from "./pages/MapPage";
 
 const DataPage: React.FC = () => (
   <div className="p-8">

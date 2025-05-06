@@ -55,7 +55,7 @@ const Sidebar: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={() => setIsExpanded(!isExpanded)} // Update the prop-controlled state
             className="w-full"
           >
             <Menu className="h-6 w-6" />
